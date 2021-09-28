@@ -1,5 +1,7 @@
 import {FC, useState} from "react";
 import {IEmployee} from "../interfaces/interfaces";
+import { Container, Row, Col } from "react-bootstrap";
+
 
 
 const Employee: FC = () => {
@@ -13,12 +15,28 @@ const Employee: FC = () => {
 
     )
 
+    const showEmployeeList = () =>{
+        return employee.map((employee,key) =>{
+            return(
+                <Container>
+                    <Col md={6} lg={4} xl={3} key={key}>
+                        <div>
+                            <p>Fornavn: {employee.firstName}</p>
+                            <p>Etter navn: {employee.lastName}</p>
+                        </div>
+                    </Col>
+                </Container>
+            )
+        })
+    }
+
     return(
-
-        <section>
-            EmployeeList
-        </section>
-
+        <>
+            <h2>Ansatt Liste</h2>
+            <Row>
+                {showEmployeeList()}
+            </Row>
+        </>
     )
 
 }

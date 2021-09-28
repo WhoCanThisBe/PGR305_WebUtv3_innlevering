@@ -8,7 +8,7 @@ TODO
 
 
 Employee page Requirement
-* [ ] Show all Employee
+* [x] Show all Employee
 * [ ] Adding Employee
 
 Customer page Requirement
