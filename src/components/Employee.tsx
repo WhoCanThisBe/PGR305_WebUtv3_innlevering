@@ -1,7 +1,17 @@
-import {FC} from "react";
+import {FC, useState} from "react";
+import {IEmployee} from "../interfaces/interfaces";
 
 
 const Employee: FC = () => {
+    const [employee] = useState<Array<IEmployee>>(
+        [
+            {firstName: "Olav", lastName: "Nordmann"},
+            {firstName: "Kari", lastName: "Nordmann"},
+            {firstName: "Espen", lastName: "Askeland"}
+
+        ]
+
+    )
 
     return(
 
