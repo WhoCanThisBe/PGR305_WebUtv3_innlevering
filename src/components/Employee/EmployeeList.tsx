@@ -1,10 +1,10 @@
 import {FC, useState} from "react";
-import {IEmployee} from "../interfaces/interfaces";
 import { Container, Row, Col } from "react-bootstrap";
+import {IEmployee} from "../../interfaces/interfaces";
 
 
 
-const Employee: FC = () => {
+const EmployeeList: FC = () => {
     const [employee] = useState<Array<IEmployee>>(
         [
             {firstName: "Olav", lastName: "Nordmann"},
@@ -42,4 +42,4 @@ const Employee: FC = () => {
 }
 
 
-export default Employee;
+export default EmployeeList;

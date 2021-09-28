@@ -1,15 +1,15 @@
 TODO
 * [x] create a Home page
-* [x] create an Employee page
+* [x] create an EmployeeList page
 * [x] create a Project page
 * [x] create a Customer page
 * [x] add Bootstrap
 * [x] create a Navigation Bar
 
 
-Employee page Requirement
-* [x] Show all Employee
-* [ ] Adding Employee
+EmployeeList page Requirement
+* [x] Show all EmployeeList
+* [ ] Adding EmployeeList
 
 Customer page Requirement
 * [ ] show all 
