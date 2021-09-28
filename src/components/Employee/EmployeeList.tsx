@@ -1,6 +1,7 @@
 import {FC, useState} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {IEmployee} from "../../interfaces/interfaces";
+import EmployeeItem from "./EmployeeItem";
 
 
 
@@ -20,10 +21,7 @@ const EmployeeList: FC = () => {
             return(
                 <Container>
                     <Col md={6} lg={4} xl={3} key={key}>
-                        <div>
-                            <p>Fornavn: {employee.firstName}</p>
-                            <p>Etter navn: {employee.lastName}</p>
-                        </div>
+                       <EmployeeItem firstName={employee.firstName} lastName={employee.lastName}/>
                     </Col>
                 </Container>
             )
