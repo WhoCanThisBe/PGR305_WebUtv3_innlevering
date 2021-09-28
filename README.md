@@ -3,4 +3,11 @@ TODO
 * [x] create an Employee page
 * [x] create a Project page
 * [x] create a Customer page
-* [ ] create a Navigation Bar
+* [ ] add Bootstrap
+* [x] create a Navigation Bar
+
+
+
+
+When finished
+*[ ] Clean up code for unnecessarily code 
