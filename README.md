@@ -9,7 +9,8 @@ TODO
 
 EmployeeList page Requirement
 * [x] Show all EmployeeList
-* [ ] Adding EmployeeList
+* [x] Adding EmployeeList
+* [x] Added pages
 
 Customer page Requirement
 * [ ] show all 

@@ -8,9 +8,9 @@ export const EmployeeContext = createContext <EmployeeContextType | null> (null)
 export const EmployeeProvider : FC = ({children}) =>{
 
     const[employeeList, setEmployee] = useState<IEmployee[]>([
-        {firstName: "Olav", lastName: "Nordmann"},
-        {firstName: "Kari", lastName: "Nordmann"},
-        {firstName: "Espen", lastName: "Askelsand"}
+        {firstName: "Olav", lastName: "Nordmann", image: "18.jpg"},
+        {firstName: "Kari", lastName: "Nordmann", image: "13.jpg"},
+        {firstName: "Espen", lastName: "Askelsand" , image: "79.jpg"}
 
     ]);
 

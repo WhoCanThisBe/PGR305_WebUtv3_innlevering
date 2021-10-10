@@ -15,12 +15,15 @@ const Routing: FC = () => {
             <Container>
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <EmployeeProvider>
-                        <Route path="/employee" component={Employee}/>
-                    </EmployeeProvider>
+
+                        <Route path="/employee">
+                            <EmployeeProvider>
+                                <Employee/>
+                            </EmployeeProvider>
+                            </Route>
                     <Route path="/project" component={Project}/>
                     <Route path ="/customer" component={Customer}/>
-                    //TODO: Fix a better 404 when you have time
+                        {/*TODO: Fix a better 404 when you have time*/}
                     <Route render={() => <h3>404 :(</h3>}/>
                 </Switch>
             </Container>

@@ -1,9 +1,10 @@
 import {FC} from "react";
+import CustomerList from "../components/Customer/CustomerList";
 
 const Customer:FC = () =>{
     return(
         <section>
-            <h3>Customer Page</h3>
+          <CustomerList/>
         </section>
     )
 

@@ -1,6 +1,5 @@
-import {FC, useContext, useState} from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import {IEmployee} from "../../interfaces/interfaces";
+import {FC, useContext} from "react";
+import { Container, Col } from "react-bootstrap";
 import EmployeeItem from "./EmployeeItem";
 import {EmployeeContext} from "../../contexts/EmployeeContext";
 import {EmployeeContextType} from "../../types/EmployeeContextType";
@@ -17,7 +16,7 @@ const EmployeeList: FC = () => {
             return(
                     //so I dont forget
                     <Col key={thisKey}>
-                       <EmployeeItem firstName={employee.firstName} lastName={employee.lastName}/>
+                       <EmployeeItem firstName={employee.firstName} lastName={employee.lastName} image ={employee.image}/>
                     </Col>
             )
         })

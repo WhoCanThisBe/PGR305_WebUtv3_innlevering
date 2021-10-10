@@ -1,15 +1,28 @@
-import React, {FC, useState} from "react";
+import React, {FC, useContext, useState} from "react";
 import {Col} from "react-bootstrap";
-import EmployeeList from "./EmployeeList";
+import {EmployeeContext} from "../../contexts/EmployeeContext";
+import {EmployeeContextType} from "../../types/EmployeeContextType";
+import {IEmployee} from "../../interfaces/interfaces";
 
 const EmployeeForm: FC = () =>{
 
     const [name,setName] = useState("")
     const [surname,setSurname ] = useState("")
-    const [list, setList] = useState(["bjarn Nilsen"]);
+
+    //naming should match with the ContextType
+    const{addEmployee} = useContext(EmployeeContext) as EmployeeContextType;
 
     const handleSubmit = (e: React.FormEvent) =>{
         e.preventDefault()
+        const newEmployee : IEmployee = {
+            firstName : name,
+            lastName : surname,
+            image : "18.jpg"
+
+        }
+
+        addEmployee(newEmployee);
+
         setName("");
         setSurname("");
 
