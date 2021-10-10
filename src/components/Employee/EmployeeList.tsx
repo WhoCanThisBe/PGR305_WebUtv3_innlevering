@@ -2,7 +2,6 @@ import {FC, useContext, useState} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {IEmployee} from "../../interfaces/interfaces";
 import EmployeeItem from "./EmployeeItem";
-import EmployeeForm from "./EmployeeForm";
 import {EmployeeContext} from "../../contexts/EmployeeContext";
 import {EmployeeContextType} from "../../types/EmployeeContextType";
 
@@ -14,9 +13,10 @@ const EmployeeList: FC = () => {
     const{employeeList} = useContext(EmployeeContext) as EmployeeContextType;
 
     const showEmployeeList = () =>{
-        return employeeList.map((employee,key) =>{
+        return employeeList.map((employee,thisKey) =>{
             return(
-                    <Col md={6} lg={4} xl={3} key={key}>
+                    //so I dont forget
+                    <Col key={thisKey}>
                        <EmployeeItem firstName={employee.firstName} lastName={employee.lastName}/>
                     </Col>
             )
