@@ -12,7 +12,7 @@ const EmployeeForm: FC = () =>{
         e.preventDefault()
         setName("");
         setSurname("");
-        EmployeeList
+
 
 
     }

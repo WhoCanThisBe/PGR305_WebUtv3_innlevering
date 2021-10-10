@@ -1,24 +1,20 @@
-import {FC, useState} from "react";
+import {FC, useContext, useState} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {IEmployee} from "../../interfaces/interfaces";
 import EmployeeItem from "./EmployeeItem";
 import EmployeeForm from "./EmployeeForm";
+import {EmployeeContext} from "../../contexts/EmployeeContext";
+import {EmployeeContextType} from "../../types/EmployeeContextType";
 
 
 
 const EmployeeList: FC = () => {
-    const [employee,setEmployee] = useState<Array<IEmployee>>(
-        [
-            {firstName: "Olav", lastName: "Nordmann"},
-            {firstName: "Kari", lastName: "Nordmann"},
-            {firstName: "Espen", lastName: "Askeland"}
 
-        ]
-
-    )
+    //naming should match with the ContextType
+    const{employeeList} = useContext(EmployeeContext) as EmployeeContextType;
 
     const showEmployeeList = () =>{
-        return employee.map((employee,key) =>{
+        return employeeList.map((employee,key) =>{
             return(
                     <Col md={6} lg={4} xl={3} key={key}>
                        <EmployeeItem firstName={employee.firstName} lastName={employee.lastName}/>

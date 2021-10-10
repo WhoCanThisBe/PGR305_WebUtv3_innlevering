@@ -6,6 +6,7 @@ import Customer from "../pages/Customer";
 import NavigationBar from "../components/Navigation/NavigationBar";
 import {Container} from "react-bootstrap";
 import {Employee} from "../pages";
+import {EmployeeProvider} from "../contexts/EmployeeContext";
 
 const Routing: FC = () => {
     return (
@@ -14,7 +15,9 @@ const Routing: FC = () => {
             <Container>
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route path="/employee" component={Employee}/>
+                    <EmployeeProvider>
+                        <Route path="/employee" component={Employee}/>
+                    </EmployeeProvider>
                     <Route path="/project" component={Project}/>
                     <Route path ="/customer" component={Customer}/>
                     //TODO: Fix a better 404 when you have time
